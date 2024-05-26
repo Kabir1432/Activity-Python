@@ -1,0 +1,15 @@
+{% extends 'email/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<p>All the tasks of the subscribed activity are evaluated and Report is generated. The Report is attached to this Email. This report includes the Certificate and the Summary Proofs of the activities done.</p>
+
+    <p><strong>Activity Title:</strong> #{{ order_detail.project.title }}</p>
+    <p><strong>Activity Category:</strong> #{{ order_detail.project.category.name }}</p>
+    <p><strong>Activity Type:</strong> #{{ order_detail.number_of_points }}</p>
+
+    <p>This report is a sample report as proof of student activity. We cannot provide WORD format as the reports are generated from scripts and are available in PDF only. Another copy of the report will be sent to the college coordinator.</p>
+
+    <p>Any malpractice of generating fake reports on our organization name is a legal violation issue and to be solved in Bangalore Jurisdiction.</p>
+{% endblock content %}

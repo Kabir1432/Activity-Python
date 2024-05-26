@@ -1,0 +1,287 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Invoice</title>
+		<style type="text/css">
+			table{
+				border-collapse: collapse;
+			}
+			body{
+				font-family: calibri
+			}
+			td{
+				padding: 5px 15px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="main" style="width:90%;margin-right:auto;margin-left:auto;">
+			<table style="width: 60%;border:1px solid #efefef;border-collapse: collapse;">
+				<tr>
+					<table style="width:100%;">
+						<tr>
+							<td  style="text-align: left;width:15%;">
+								<img style="width:80px;height:auto;" src="{{ base_url }}/static/images/left-logo.png">
+							</td>
+							<td colspan="2" style="text-align: center;width:100% !important;">
+								<h1>LGS Research Foundation</h1>
+								<h3>Project: Activity Points - Engineering</h3>
+							</td>
+							<td  style="text-align: right;width:30%;">
+								<img style="width:80px;height:auto;" src="{{ base_url }}/static/images/right_logo.png">
+							</td>
+						</tr>
+					</table>
+				</tr>
+				<tr>
+					<td colspan="4" style="padding:5px 0 0 0;background: #92d14f;width:100%;">
+						<table style="width: 100%;background: #92d14f;margin: 0 0 15px 0;">
+							{% comment %} <td style="text-align: right;padding: 0"><img src="{{ base_url }}/static/images/student.png"></td> {% endcomment %}
+							<tr style="background:#92d14f;">
+								<td style="text-align: right;background: #92d14f;padding: 0;">
+									<h6 style="background: #fff;color: #000;font-size: 30px;display: inline-block;word-wrap: break-word;text-align: left;padding:10px 20px;margin: 0;">
+										INVOICE
+									</h6>
+								</td>
+								<td style="background: #92d14f;padding: 0"> &nbsp;</td>
+								<td style="background: #92d14f;padding: 0"> &nbsp;</td>
+								<td style="background: #92d14f;padding: 0"> &nbsp;</td>
+								<td style="background: #92d14f;padding: 0">&nbsp; </td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td  colspan="4" style="text-align: center;padding: 30px 0">
+						<table style="width:100%;">
+							<tr>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 700;font-size: 17px">
+									INVOICE NUMBER
+								</td>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 700;font-size: 17px">
+									Dated
+								</td>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 700;font-size: 17px">
+									Mode/ Terms Of Payment
+								</td>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 700;font-size: 17px">
+									Student Mem. ID
+								</td>
+							</tr>
+							<tr>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 500;font-size: 16px">
+									{{ order_data.invoice_number }}
+								</td>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 500;font-size: 16px">
+									{{ order_data.create_time.date }}
+								</td >
+								<td style="border:1px solid #333;padding: 5px;font-weight: 500;font-size: 16px">
+									ONLINE
+								</td>
+								<td style="border:1px solid #333;padding: 5px;font-weight: 500;font-size: 16px">
+									{{ order_data.user.student_details.student_membership_id }}
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="width:100%" valign="top">
+						<table style="margin:20px 0;">
+							<tr >
+								<td style="border:1px solid #444">
+									<h5 style="color: #765904;font-size: 24px;font-weight: 600;margin:0">Bill From(Franchisor)</h5>
+									<label style="margin-top: 10px;font-size: 20px;font-weight: 600;margin-bottom: 5px">LGS Research Foundation</label>
+									<p style="font-size: 16px;margin:0">No.126, First Floor, Aadri, 7th Cross, 2nd Main,
+										Hoysalanagar, Sunkadakatte, Bangalore - 560091,
+									</p>
+									<p style="font-size: 16px;margin:0">State: Karnataka; Code: 29</p>
+									<p style="font-size: 16px;margin:0">Ph: 91410 89856,91410 89857</p>
+									<p style="font-size: 16px;margin:0">Email: communications@activitypointsengg.com</p>
+									<p style="font-size: 16px;margin:0">GSITN:29AAFCL6730Q1ZS</p>
+								</td>
+								<td style="border:1px solid #444;width:50%;">
+									<h5 style="color: #765904;font-size: 24px;font-weight: 600;margin:0">Bill To:(Student)</h5>
+									<label  style="margin-top: 10px;font-size: 20px;font-weight: 600;margin-bottom: 5px">{{ order_data.user.fullname }}</label>
+									<p style="font-size: 16px;margin:0">{{ order_data.user.address }}
+									</p>
+									<p style="font-size: 16px;margin:0">{{ order_data.user.student_details.student_state.name }}</p>
+									<p style="font-size: 16px;margin:0">Ph:{{ order_data.user.phone }}</p>
+									<p style="font-size: 16px;margin:0">Email:{{ order_data.user.email }}</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+					{% comment %} <td style="width:50%;height:100%;" valign="top">
+						<table style="width:100%;height:100%;">
+							<tr style="width:100%;height:100%;">
+								<td style="border:1px solid #444;width:100%;height:100%;">
+									<h5 style="color: #765904;font-size: 24px;font-weight: 600;margin:0">Bill To:(Student)</h5>
+									<label  style="margin-top: 10px;font-size: 20px;font-weight: 600;margin-bottom: 5px">{{ order_data.user.fullname }}</label>
+									<p style="font-size: 16px;margin:0">{{ order_data.user.address }}
+									</p>
+
+									<p style="font-size: 16px;margin:0">{{ order_data.user.student_details.student_state.name }}</p>
+									<p style="font-size: 16px;margin:0">Ph:{{ order_data.user.phone }}</p>
+									<p style="font-size: 16px;margin:0">Email:{{ order_data.user.email }}</p>
+								</td>
+							</tr>
+						</table>
+					</td> {% endcomment %}
+				</tr>
+				<tr>
+					<td colspan="4">
+						<table style="width: 100%;margin-bottom:20px;">
+							<tr>
+								<td colspan="6" style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 17px;font-weight: 600;text-align: center;">Activity Subscriptions Calculations</td>
+							</tr>
+							<tr>
+								<td style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 20px;font-weight: 600;text-align: center;">SI No</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 20px;font-weight: 600;text-align: center;">Description</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 20px;font-weight: 600;text-align: center;">HSN/ SAC</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 15px;font-weight: 600;text-align: center;">Activity Qty Purchased</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 20px;font-weight: 600;text-align: center;">INR / Project</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 50px;font-size: 20px;font-weight: 600;text-align: center;">Taxable Value</td>
+							</tr>
+
+							{% for item in order_details %}
+								<tr>
+									<td style="border:1px solid #444;height: 30px;font-size: 16px;font-weight: 600;text-align: center;">{{ forloop.counter }}</td>
+									<td style="border:1px solid #444;height: 30px;font-size: 16px;font-weight: 600;text-align: center;">{{ item.project.title }}</td>
+									<td style="border:1px solid #444;height: 30px;font-size: 16px;font-weight: 500;text-align: center;">999299</td>
+									<td style="border:1px solid #444;height: 30px;font-size: 16px;font-weight: 600;text-align: center;">1</td>
+									<td style="border:1px solid #444;height: 30px;font-size: 16px;font-weight: 600;text-align: center;">{{ item.total_price }}</td>
+								<td style="border:1px solid #444;    height: 30px;font-size: 16px;font-weight: 600;text-align: center;">{{ item.total_price }}</td>
+								</tr>
+							{% endfor %}
+							<tr>
+								<td style="border:1px solid #444;height: 15px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 15px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 15px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 15px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 15px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 15px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+							</tr>
+							<tr>
+								<td colspan="3" style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">Discount Amount</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.discount_amount }}</td>
+							</tr>
+							<tr>
+								<td colspan="3" style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">Sub Total</td>
+
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_details_count }}</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.sub_total_amount }}</td>
+							</tr>
+							<tr>
+								<td colspan="3" style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">INCLUSIVE TAX VALUE</td>
+
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ new_total_tax|floatformat:2 }}</td>
+							</tr>
+							<tr>
+								<td colspan="3" style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">Payment Gateway Fee (Razorpay)</td>
+
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.payment_gateway_fee|floatformat:2 }}</td>
+							</tr>
+							<tr>
+								<td colspan="3" style="background: #a7d08c; border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">Billed Value</td>
+
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;"></td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.total_amount }}</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" style="">
+						<table style="width: 100%;margin-bottom:20px;">
+							<tr>
+								<td colspan="7" style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">Tax Calculations</td>
+
+							</tr>
+							<tr>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">SI No</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">HSN/ SAV</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">BILLED VALUE</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">CGST(9%)</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">SGST(9%)</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">IGST(18%)</td>
+								<td style="background:#ffc000;border:1px solid #444;height: 30px;font-size: 20px;font-weight: 600;text-align: center;">Total Tax</td>
+							</tr>
+							<tr>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">1</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">999299</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.total_amount|floatformat:2 }}</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.cgst|floatformat:2 }}</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.sgst|floatformat:2 }}</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ order_data.igst|floatformat:2 }}</td>
+								<td style="border:1px solid #444;height: 30px;font-size: 18px;font-weight: 600;text-align: center;">{{ new_total_tax|floatformat:2 }}</td>
+							</tr>
+							<tr>
+
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<table style="width: 100%;margin-bottom:20px;">
+							<tr>
+								<td colspan="2" style="border:1px solid #444;">
+									<h5 style="color:#765904;font-size:20px;font-weight: 500;margin:0"><b>Total Bill in Words:</b> Indian Rupees {{ amount_in_words }}</h5>
+
+								</td>
+
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+				<tr>
+					<td colspan="4">
+						<table style="width: 100%;">
+							<tr>
+								<td colspan="2" style="border:1px solid #444;">
+									<h5 style="color:#765904;font-size: 20px;font-weight: 600;margin:0">Terms And Conditions </h5>
+									<ul>
+										<li>
+											<p style="color: #444;font-size: 16px;font-weight: 600;"> Activity subscribed cannot be cancelled or refunded</p>
+										</li>
+										<li>
+											<p style="color: #444;font-size: 16px;font-weight: 600;"> Activity subscribed cannot be Changed or Swapped</p>
+										</li>
+										<li>
+											<p style="color: #444;font-size: 16px;font-weight: 600;"> Activity subscribed has Validity</p>
+										</li>
+										<li>
+											<p style="color: #444;font-size: 16px;font-weight: 600;"> All Dispute is subjected to the jurisdiction of Banglore</p>
+										</li>
+									</ul>
+								</td>
+								<td colspan="2" style="color:#765904;font-size: 20px;font-weight: 600;margin:0;text-align: center;" valign="bottom">Authorized Signature</td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+				<tr>
+					<td colspan="4" style="text-align: center;">
+						<h5 style="font-size: 14px"><i>This is Computer Generated Invoice. No Need of Seal and Signature</i></h5>
+					</td>
+				</tr>
+
+
+			</table>
+		</div>
+	</body>
+</html>

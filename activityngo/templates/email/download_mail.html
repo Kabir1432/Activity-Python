@@ -1,0 +1,110 @@
+{% load static %}
+
+{% block subject %}ACTIVITY POINTS ENGG APP – Successfully Downloaded{% endblock %}
+
+{% block html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Downloading Our App</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333; /* Default text color */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #FFF369;
+            color: #07122B; /* Title text color */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FFF369;
+            color: #07122B; /* Button text color */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #FFF369;
+            color: #07122B; /* Footer text color */
+        }
+        .note {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ACTIVITY POINTS ENGG APP – Successfully Downloaded</h1>
+        </div>
+        <div class="logo">
+            <img src="{{ base_url }}/static/images/ngo_logo.png" alt="Company Logo" width="200">
+        </div>
+        <p>Hi {{ first_name }}</p>
+        <p>Thank you for downloading the ACTIVITY POINTS ENGG Android Application. This is the platform for an Engineering Student to implement the AICTE Activity Points. Different activities from different NGOs, as per the guidelines of AICTE and universities, are available in this application.</p>
+        <p>Registration is mandated to access the application. Please go through the User Manuals, Activities List, and buy the Activity. Read the Instructions and Terms &amp; Conditions before buying the activity.</p>
+        <p>For any clarifications, you can email us at <a href="mailto:communication@activitypointsengg.com">communication@activitypointsengg.com</a> or reach us via WhatsApp/Call at <a href="tel:+91-9591842004">+91-9591842004</a>.</p>
+        <p>Thanks,</p>
+        <p>Team ACTIVITY POINTS ENGG</p>
+        <div class="note">
+            <p><strong>NOTE:</strong> If the email is not found in INBOX, check the SPAM folder and mark the EMAIL as NOT A SPAM. Add <a href="mailto:communication@activitypointsengg.com">communication@activitypointsengg.com</a> to your white list / safe sender list. Else, your mailbox filter or ISP (Internet Service Provider) may stop you from receiving e-mails. For details visit our website <a href="www.activitypointsengg.com">www.activitypointsengg.com</a>.</p>
+        </div>
+
+    </div>
+    <div class="footer">
+        &copy; <span id="currentYear"></span> ACTIVITY POINTS ENGG APP. All rights reserved.
+    </div>
+
+    <script>
+        // Get the current year using JavaScript
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear;
+    </script>
+</body>
+</html>
+
+
+
+{% endblock %}

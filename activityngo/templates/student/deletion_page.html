@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Account Deletion Instructions</title>
+
+    <!-- Add premium CSS styles -->
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            /* width: 80%; */
+            /* max-width: 600px; */
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 10vh;
+            color: #333;
+            font-size: 3vh;
+            font-weight: bold;
+        }
+
+        h5 {
+            color: #555;
+            font-size: 2vh;
+        }
+
+        img {
+            max-width: 20%;
+            height: 30%;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+        hr {
+            /* margin: 20px;
+            opacity: 0.5;
+            width: 10vh; */
+            margin: 20px auto;
+        width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="card-body">
+        <br>
+        <h3>Account Deletion Instructions</h3>
+        <hr>
+        <br>
+        <h5>If you want to delete your activities for Activity Points ENGG, you can remove them by following these steps:</h5>
+        <br>
+        <hr>
+        <h5>1. Launch the app: Open the app on your device and Navigate to the Hamburger button: look for an icon that represents in top bar left and side. This is typically denoted by a My profile icon. Tap on it to proceed.</h5>
+        <br>
+        <img src="{% static 'images/account_deletion_instructions_img_1.jpg' %}" alt="Step 1">
+
+        <br>
+        <hr>
+        <br>
+        <h5>2. Locate the delete account option: Within the account screen, related to account deletion. This option named "Delete Account" Tap on it to proceed. Confirmation screen: After selecting the account deletion option, the app may display a confirmation screen to ensure you want to delete your account. Read the prompt carefully and make sure you understand the consequences of deleting your account..</h5>
+        <br>
+        <br>
+        <img src="{% static 'images/account_deletion_instructions_img_2.jpg' %}" alt="Step 2">
+        <br>
+        <hr>
+        <br>
+        <h5>3. Locate the delete account option: This option named "Delete Account" Tap on it to proceed.</h5>
+        <br>
+        <br>
+        <img src="{% static 'images/account_deletion_instructions_img_3.jpg' %}" alt="Step 3">
+        <br>
+        <hr>
+        <br>
+        <br>
+
+    </div>
+    <!-- /.card-body -->
+</div>
+
+</body>
+</html>

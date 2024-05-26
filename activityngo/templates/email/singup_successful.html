@@ -1,0 +1,11 @@
+{% extends 'email/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<p>SIGNUP with ACTIVITY POINTS ENGG – APP is successful. Following are the Credentials:</p>
+<p><strong>Username:</strong> {{ user.email }}</p>
+<p><strong>Password:</strong> {{ password }}</p>
+<p><strong>Student Membership ID:</strong> {{ user.student_details.student_membership_id }}</p>
+<p>Student can subscribe to the ACTIVITIES available from different NGO’s on the application and implement as per the instructions. Refer the FAQ and User Manual section to get to know the process.</p>
+{% endblock content %}

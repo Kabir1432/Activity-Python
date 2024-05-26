@@ -1,0 +1,264 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+	<title>Invoice</title>
+	<style type="text/css">
+		@page:first {
+			border: 2px solid black;
+		}
+		* {
+			box-sizing: border-box;
+			font-family: 'Times New Roman', Times, serif;
+			font-style: normal;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		
+
+		td {
+			padding: 5px 15px;
+		}
+
+		.student_name td {
+			border: 1px solid #000;
+		}
+
+		h1 {
+			font-size: 50px;
+			line-height: 65px;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+
+
+
+		.main {
+			padding: 2.25rem 3rem;
+		}
+
+		h3 {
+			font-size: 30px;
+			line-height: 40px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		span {
+			font-size: 25px;
+			line-height: 30px;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 30px;
+		}
+
+		h4 {
+			font-size: 30px !important;
+			line-height: 32px;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+		.page-break {
+            page-break-before: always;
+        }
+        .main{
+			height:auto;
+		}
+		.main_bg{
+			height:auto;
+		}
+		h5{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+			margin-bottom:0 !important;
+		}
+		li{
+            font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+        }
+		h2{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		td{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		p{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		h4 {
+			font-size:30px !important;
+			line-height: 32px;
+			margin-bottom: 0;
+			font-weight: 700;
+			margin: 0;
+		}
+		h3 {
+			font-size:37px !important;
+			line-height: 40px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+	</style>
+</head>
+
+<body>
+    {# Page 32 This is task 2 #}
+	<div class="main" style="width:100%;overflow-wrap: break-word;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;display: block;width: 100%">
+				<tbody style="width: 100%">
+				<tr>
+					<td align="left">
+						{% if order_detail.number_of_points == "points_20" %}
+							<h4 style="font-weight: bold;margin-top:0;">Appendix 08
+						{% elif order_detail.number_of_points == "points_10" %}
+							<h4 style="font-weight: bold;margin-top:0;">Appendix 04
+						{% else %}
+							<h4 style="font-weight: bold;margin-top:0;">Appendix 02
+						{% endif %}
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">
+						<h4 style="font-weight: bold;text-align: center">Case Study Questions</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+                {% for item in essay_question_data_2 %}
+                    <tr style="display: block;width: 100%">
+                        <td align="left" style="display: block;width: 100%">
+                            <h5 style="font-weight: bold; display: block;width: 100%;font-size:22px!important;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style="margin: 0;display: block;width: 100%;font-size:22px!important;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	{# Page 9 Chapter 01 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						
+						{% if order_detail.number_of_points == "points_20" %}
+							<h4 style="font-weight: bold;font-size: 50px;">Appendix 09</h4>
+						{% elif order_detail.number_of_points == "points_10" %}
+							<h4 style="font-weight: bold;font-size: 50px;">Appendix 05</h4>
+						{% else %}
+							<h4 style="font-weight: bold;font-size: 50px;">Appendix 03</h4>
+						{% endif %}
+					</td>
+				</tr>
+
+				<tr>
+					<td style="text-align: center;">
+						<h4 style="font-weight: bold;font-size: 40px;">Survey Questions</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 25px;">
+						<p style="font-size: 25px;margin: 0;">{{ project_report_content.appendix|safe }}</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+    {# Page 32 This is task 10 #}
+	<div class="main page-break" style="width:100%;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						
+						{% if order_detail.number_of_points == "points_20" %}
+							<h4 style="font-weight: bold;font-size: 50px;margin-bottom: 0;">Appendix 10</h4>
+						{% elif order_detail.number_of_points == "points_10" %}
+							<h4 style="font-weight: bold;font-size: 50px;margin-bottom: 0;">Appendix 06</h4>
+						{% else %}
+							<h4 style="font-weight: bold;font-size: 50px;margin-bottom: 0;">Appendix 04</h4>
+						{% endif %}
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h4 style="text-align: center; font-weight: 700;">Exit Test Result</h4>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td align="left">
+						<p style="font-size: 20px;margin: 0;">To evaluate the understanding and analysis level of Activity Points Objective and Social
+                            Entrepreneurship Vision of the Project, the specific Multiple Choice Questions are allowed
+                            to answer by Student. Only upon passing the test, the Certificate and Practical Activity
+                            Proofs are issued to the Student.
+						</p>
+
+					</td>
+				</tr>
+                <tr>
+					<td style="height: 40px;"></td>
+				</tr>
+                <tr><td align="left"><p style="font-size: 20px;margin: 0;"> Number of Questions: 20 </p></td></tr>
+                <tr><td align="left"><p style="font-size: 20px;margin: 0;"> Number of Correct Answers needed to pass Exit Test: 15 </p></td></tr>
+                <tr><td align="left"><p style="font-size: 20px;margin: 0;"> Number of Correct Answers: 20 </p></td></tr>
+                <tr><td align="left"><p style="font-size: 20px;margin: 0;"> Number of Wrong Answers: 00 </p></td></tr>
+                <tr><td align="left"><p style="font-size: 20px;margin: 0;"> Result: Pass </p></td></tr>
+               
+			</table>
+		</div>
+	</div>
+    {# Page 33 static content #}
+
+
+	{% comment %} <div class="main page-break" style="width:100%; height: 1200px;text-align: center; display: flex; align-items: center; justify-content: center;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;height: 100%;text-align: center; display: flex; align-items: center; justify-content: center;">
+				<tr>
+					<td style="text-align: center;width:100%;height: 100%;text-align: center; display: flex; align-items: center; justify-content: center;">
+						<h1 style="font-weight: 700; font-size: 30px;width:100%;height: 100%;text-align: center; display: flex; align-items: center; justify-content: center;">For the Consolidated Report</h1>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div> {% endcomment %}
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'website/base.html' %}
+{% block content %}
+{% load static %}
+<div class="container section">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-12 text-break">
+      {{ web_content.meta_value|safe }}
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

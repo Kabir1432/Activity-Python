@@ -1,0 +1,1286 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+	<title>Invoice</title>
+	<style type="text/css">
+		@page:first {
+			border: 2px solid black;
+		}
+		
+		* {
+			box-sizing: border-box;
+			font-family: 'Times New Roman', Times, serif;
+			font-style: normal;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+		td {
+			padding: 5px 15px;
+		}
+
+		.student_name td {
+			border: 1px solid #000;
+		}
+
+		h1 {
+			font-size: 28px !important;
+			line-height: 65px;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+
+		h3 {
+			font-size:37px !important;
+			line-height: 40px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+		span {
+			font-size: 25px;
+			line-height: 30px;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 20px !important;
+			font-weight: 500;
+			line-height: 30px;
+			margin: 0 !important;
+		}
+
+		h4 {
+			font-size:30px !important;
+			line-height: 32px;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+		.page-break {
+            page-break-before: always;
+        }
+        .main{
+			height:auto;
+			position:relative;
+		}
+		.main_bg{
+			height:auto;
+		}
+		h5{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		li{
+            font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+        }
+		h2{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		td{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		p{
+			font-size: 24px !important;
+			text-align:justify;
+			line-height:1.5;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	{# Page 7 CERTIFICATE 2 #}
+	<div class="" style="width:100%;position:relative;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="text-align:center;">
+						<h3 style="font-weight: bold !important;text-decoration: underline;">CERTIFICATE</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">
+						<p style="font-size: 25px;">Certified that the AICTE Activity Points Project entitled <span style="font-weight: bold;">&ldquo;{{ project.title }}&rdquo;</span> was implemented by Student <span style="font-weight: bold;">{{ user.fullname }}</span> with Student ID/USN {{ user.student_details.id_number }}
+							under the support of registered NGO - <span style="font-weight: bold;">&ldquo;{{ ngo_name }}&rdquo;</span> and monitoring of <b>Mr. B.G. Shivanna,</b> a Red Cross
+							Coordinator, NSS
+							Coordinator, Himalaya Wood Badge Holder, Scouts and Guides Instructor</p>
+						<p style="font-size: 25px;">My suggestion was considered in creating the syllabus, conducting
+							theory class &#45; Survey &#45;
+							Case Study and Practical activities. The implementation was done as per the standards to
+							make students learn the social problems and come up with the solution for the same</p>
+						<p style="font-size: 25px;">The procedures followed towards this project to earn <b>{{ number_of_points }} AICTE
+								Activity Points</b> for the
+							student is satisfactory as per my experience in the Red Cross - Scouts and Guides.
+						</p>
+
+					</td>
+
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td>
+									<p style="font-size: 25px;font-weight: bold;">Date: {{ order_detail.report_generate_date|date:'d-m-Y' }}</p>
+								</td>
+								<td style="text-align: right;">
+									<img src="https://api.activitypointsengg.com/static/images/second_logo_president.png"
+										style="border-bottom: 1px solid #000000;padding-bottom: 20px;" width="30%" height="45%">
+									<p style="font-size: 25px;margin-top: 10px;margin-bottom: 5px;text-align: right;">Signature of Red
+										Cross Coordinator</p>
+									<p style="font-size: 25px;font-weight: bold;margin-top: 0px;margin-bottom: 5px;text-align: right;">Mr.
+										B. G. Shivanna </p>
+									<p style="font-size: 25px;margin-top: 0px;margin-bottom: 5px;text-align: right;">Red Cross Coordinator
+									</p>
+									<p style="font-size: 25px;margin-top: 0px;text-align: right;">Ph: 9448165040 / 9880436959</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 8 TABLE OF CONTENTS #}
+	
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">TABLE OF CONTENTS</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td>
+									<h5 style="font-size: 21px;font-weight: bold;margin-bottom: 0;">CHAPTER</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 21px;font-weight: bold;margin-bottom: 0;">TITLE </h5>
+								</td>
+								
+							</tr>
+
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 01 </h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Introduction </h5>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 02</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Problem Statement </h5>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 03</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">{{ ngo_name }}</h5>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 04</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Ongoing Solutions and Technical Gap </h5>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 05</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Proposed Engineering Solution by LGS Research Foundation </h5>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 06</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Learning and Contribution by Student </h5>
+								</td>
+								
+							</tr>
+							<tr>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Chapter 07</h5>
+								</td>
+								<td>
+									<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+										Conclusion </h5>
+								</td>
+								<td>
+									
+								</td>
+							</tr>
+							<tr>
+								<td colspan="4" style="text-align: center;">
+									<h5 style="font-size: 21px;font-weight: bold;margin-bottom: 0;">APPENDICES</h5>
+								</td>
+						{% if order_detail.number_of_points == "points_20" %}
+							<div class="20_point_table">
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 01</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Public Survey Results </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 02</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Field Visit Summary </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 03</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Provide Solution as Beneficiary </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 04</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Provide Solution as Law Maker (Govt)</h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 05</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Provide Solution as an Engineer </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 06</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Provide Startup Idea to Resolve the Issue</h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 07</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Financial Analysis of the Proposed Startup</h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 08</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">Case
+											Study Questions </h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 09</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Survey Questions </h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 10</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Exit Test Result </h5>
+									</td>
+								</tr>
+							</div>
+						{% elif order_detail.number_of_points == "points_10" %}
+							<div class="20_point_table">
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 01</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Public Survey Results </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 02</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Field Visit Summary </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 03</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Provide Solution as an Engineer </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 04</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											 Study Questions</h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 05</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Survey Questions </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 06</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Exit Test Result</h5>
+									</td>
+									
+								</tr>
+							</div>
+						{% else %}
+							<div class="20_point_table">
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 01</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Public Survey Results </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 02</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Case Study Questions </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 03</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Survey Questions </h5>
+									</td>
+									
+								</tr>
+								<tr>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Appendix 04</h5>
+									</td>
+									<td>
+										<h5 style="font-size: 25px;margin-bottom: 0;font-weight: normal;margin-top: 0;">
+											Exit Test Result</h5>
+									</td>
+								</tr>
+							</div>
+						{% endif %}
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 60px;"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 9 Chapter 01 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;font-size: 50px;">Chapter 01</h3>
+					</td>
+				</tr>
+
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;font-size: 40px;">Introduction</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 25px;">
+						<p style="font-size: 25px;margin: 0;">{{ project_report_content.chapter_01|safe }}</p>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	{# Page 10 Chapter 02 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 02</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">Problem Statement</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td align="left" style="font-size: 25px;">
+						<p style="font-size: 25px;margin: 0;">{{ project_report_content.chapter_02|safe }}</p>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	{# Page 11 Chapter 03 #}
+	{% if order_detail.number_of_points == "points_05" %}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 03</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">LGS Research Foundation</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;">This project is execute under the implementation support
+							of the registered NGO “{{ ngo_name }}”. The platform helps in
+							identifying the public issue, analyze the drawbacks of current solution and develop an
+							Engineering Solution to bridge the technical gap. They are supporting students in the
+							implementation of AICTE Activity Points.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;font-weight: bold;">Mode of Implementation in this Project:
+						</p>
+						<p style="font-size: 25px;margin:0;">As the project needs minimum of 20 Hours activity, the
+							following activities are done by
+							student</p>
+					</td>
+
+				</tr>
+
+				<tr>
+					<td style="height: 20px;">
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td>
+						<table class="student_name" style="width: 80%;margin-left:10%;margin-right:10%;">
+							<tr>
+								<td valign="middle"
+									style="font-size: 25px;line-height:40px;ine-height:40px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+									Activity </td>
+								<td valign="middle"
+									style="font-size: 25px;line-height:40px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+									Accountable for</td>
+
+							</tr>
+
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Theory Information</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">02 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Case Study Questions </td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">05 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Public Survey Activity</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">10 Hours</td>
+
+							</tr>
+
+							<tr>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Exit Test</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">01 Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Activity Report</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">02 Hours</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;">
+
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+	{% elif order_detail.number_of_points == "points_10" %}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 03</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h4 style="font-weight: bold;">LGS Research Foundation</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;">This project is execute under the implementation support
+							of the registered NGO “{{ ngo_name }}”. The platform helps in
+							identifying the public issue, analyze the drawbacks of current solution and develop an
+							Engineering Solution to bridge the technical gap. They are supporting students in the
+							implementation of AICTE Activity Points.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;font-weight: bold;">Mode of Implementation in this Project:
+						</p>
+						<p style="font-size: 25px;margin:0;">As the project needs minimum of 40 Hours activity, the
+							following activities are done by
+							student</p>
+					</td>
+
+				</tr>
+
+				<tr>
+					<td style="height: 20px;">
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td>
+						<table class="student_name" style="width: 80%;margin-left:10%;margin-right:10%;">
+							<tr>
+								<td valign="middle"
+									style="font-size: 25px;line-height:40px;ine-height:40px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+									Activity </td>
+								<td valign="middle"
+									style="font-size: 25px;line-height:40px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+									Accountable for</td>
+
+							</tr>
+
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Theory Information</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">02 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Case Study Questions </td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">10 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Public Survey Activity</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">10 Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Field Visit Activity </td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">10 Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Solution as Engineer</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">05 Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Exit Test</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">01 Hours</td>
+
+							</tr>
+							<tr>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Activity Report</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">02 Hours</td>
+
+							</tr>
+
+
+
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;">
+
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+	{% else %}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 03</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h4 style="font-weight: bold;">LGS Research Foundation</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;">This project is execute under the implementation support
+							of the registered NGO “{{ ngo_name }}”. The platform helps in
+							identifying the public issue, analyze the drawbacks of current solution and develop an
+							Engineering Solution to bridge the technical gap. They are supporting students in the
+							implementation of AICTE Activity Points.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;font-weight: bold;">Mode of Implementation in this Project:
+						</p>
+						<p style="font-size: 25px;margin:0;">As the project needs minimum of 80 Hours activity, the
+							following activities are done by
+							student</p>
+					</td>
+
+				</tr>
+
+				<tr>
+					<td style="height: 20px;">
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td>
+						<table class="student_name" style="width: 80%;margin-left:10%;margin-right:10%;">
+							<tr>
+								<td valign="middle"
+									style="font-size: 25px;line-height:40px;ine-height:40px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+									Activity </td>
+								<td valign="middle"
+									style="font-size: 25px;line-height:40px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+									Accountable for</td>
+
+							</tr>
+
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Theory Information</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">02 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Case Study Questions </td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">20 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Public Survey Activity</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">20 Hours</td>
+
+							</tr>
+
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Field Visit Activity </td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">10 Hours</td>
+
+							</tr>
+
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Solution as Beneficiary, Law Maker and
+									Engineer</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">15 Hours</td>
+
+							</tr>
+
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Startup Idea by Student</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">05 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Financial Analysis</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">02 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Exit Test</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">01 Hours</td>
+
+							</tr>
+							<tr>
+
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">Activity Report</td>
+								<td style="font-size: 25px;line-height:40px;font-weight: 500;">05 Hours</td>
+
+							</tr>
+
+
+
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;">
+
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+	{% endif %}
+
+	{# Page 12 Chapter 04 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 04</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">Ongoing Solutions and Technical Gap</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="font-size:25px;line-height:40px;">
+						<p style="font-size: 25px;margin: 0;">{{ project_report_content.chapter_04|safe }}</p>
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 13 Chapter 05 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 05</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">Proposed Engineering Solution by NGO </h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;">{{ project_report_content.chapter_05|safe }}</p>
+					</td>
+
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 14 Chapter 06 #}
+	<div class="main page-break" style="width:100%;height:auto">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 06</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">Learning and Contribution by Student </h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<p style="font-size: 25px;margin: 0;">{{ project_report_content.chapter_06|safe }}</p>
+					</td>
+
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	{# Page 15 Chapter 07 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;">Chapter 07</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;">Conclusion</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td >
+						<h4 style="font-size:40px;">
+							<p style="font-size: 25px;margin: 0;">{{ project_report_content.chapter_07|safe }}</p>
+						</h4>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 16 APPENDICES TEXT #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;height:100%;display:flex;justify-content:center;align-item:center;">
+				<tr>
+					<td style="text-align: center;">
+						<h3 style="font-weight: bold;
+						font-size: 40px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 1450px;">APPENDICES
+						</h3>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 17 Appendix 01 PIE CHARTS#}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;font-size: 40px;">Appendix 01</h3>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align: center;">
+						<h4 style="font-weight: bold;font-size: 40px;">Public Survey Results</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr style="margin-top: 500px !important;">
+
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_5.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_4.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+							<tr style="margin-top: 300px !important;">
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_6.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_7.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+							<tr style="margin-top: 80px !important;">
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_8.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_9.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	{# Page 18 PIE CHARTS #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_10.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_11.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+							<tr>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_12.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_13.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+							<tr>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_14.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_15.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+							<tr>
+
+
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+	{# Page 19 PIE CHARTS #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_16.url }}" style="width: 105%;height: 52%;border: 2px solid black;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_17.url }}" style="width: 105%;height: 52%;border: 2px solid black;"></td>
+							</tr>
+							<tr>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_18.url }}" style="width: 105%;height: 52%;border: 2px solid black;border: 2px solid black;"></td>
+								<td valign="top"><img src="{{ order_detail.student_activity_pie_chart_19.url }}" style="width: 105%;height: 52%;border: 2px solid black;border: 2px solid black;"></td>
+							</tr>
+							<tr colspan="2" style="text-align: center;">
+								<td valign="top" colspan="2"><img src="{{ order_detail.student_activity_pie_chart_20.url }}" style="width: 70%;border: 2px solid black;border: 2px solid black;"></td>
+
+							</tr>
+
+						</table>
+
+
+					</td>
+
+				</tr>
+				<tr>
+					<td style="height: 30px;"> </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	{# Page 20 UPLOAD PHOTOS #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td valign="top"><img src="{{ upload_photo_data.image_1_url }}" style="width: 450PX; height: 600px;"></td>
+								<td valign="top"><img src="{{ upload_photo_data.image_2_url }}" style="width: 450PX; height: 600px;"></td>
+							</tr>
+							<tr>
+								<td valign="top"><img src="{{ upload_photo_data.image_3_url }}" style="width: 450PX; height: 600px;"></td>
+								<td valign="top"><img src="{{ upload_photo_data.image_4_url }}" style="width: 450PX; height: 600px;"></td>
+
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"> </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page 21 #}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				<tr>
+					<td>
+						<table style="width: 100%;">
+							<tr>
+								<td valign="top"><img src="{{ upload_photo_data.image_5_url }}" style="width: 450PX; height: 600px;"></td>
+								<td valign="top"><img src="{{ upload_photo_data.image_6_url }}" style="width: 450PX; height: 600px;"></td>
+							</tr>
+							{% if order_detail.number_of_points == "points_20" %}
+							<tr>
+								<td valign="top"><img src="{{ upload_photo_data.image_7_url }}" style="width: 450PX; height: 600px;"></td>
+								<td valign="top"><img src="{{ upload_photo_data.image_8_url }}" style="width: 450PX; height: 600px;"></td>
+
+							</tr>
+							{% endif %}
+						</table>
+
+
+					</td>
+
+				</tr>
+				<tr>
+					<td style="height: 30px;"> </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	{# Page UPLOAD PHOTO #}
+	{% if order_detail.number_of_points == "points_20" %}
+		<div class="main page-break" style="width:100%;height:auto;">
+			<div class="main_bg">
+				<table style="width: 100%;border-collapse: collapse;">
+
+					<tr>
+						<td>
+							<table style="width: 100%;">
+								<tr>
+									<td valign="top"><img src="{{ upload_photo_data.image_9_url }}" style="width: 450PX; height: 600px;"></td>
+									<td valign="top"><img src="{{ upload_photo_data.image_10_url }}" style="width: 450PX; height: 600px;"></td>
+								</tr>
+							</table>
+
+
+						</td>
+
+					</tr>
+					<tr>
+						<td style="height: 30px;"> </td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	{% endif %}
+	{# Page 22 this is task 4 Short_Answer_Question and Essay_Question#}
+	{% if order_detail.number_of_points != "points_05" %}
+	<div class="main page-break" style="width:100%;height:auto;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+
+				<tr>
+					<td align="left">
+						<h3 style="font-weight: bold;font-size: 40px;">Appendix 02</h3>
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="text-align: center;">
+						<h4 style="font-weight: bold;font-size: 40px;">Field Visit Summary</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="">
+						<p style="font-size: 25px;margin: 0;">As a part of the project, visit is made to the nearest
+							location and interactions are made to
+							understand the ongoings. Summary is listed here along with Photo Proof.</p>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<table style="width: 100%;margin-top: 20px">
+							<tr>
+								<td valign="top"><img src="{{ upload_photo_question_data_4_dict.image_1_url }}" style="width: 375PX; height: 500px;"></td>
+								<td valign="top"><img src="{{ upload_photo_question_data_4_dict.image_2_url }}" style="width: 375PX; height: 500px;"></td>
+							</tr>
+
+						</table>
+
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td>
+						<table style="width: 100%;margin-top: 20px;text-align:center;">
+							<tr>
+								<td valign="top"><img src="{{ upload_photo_question_data_4_dict.image_3_url }}" style="width: 375PX; height: 500px;"></td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+
+
+			</table>
+		</div>
+	</div>
+	
+	
+	{% endif %}
+
+</body>
+</html>

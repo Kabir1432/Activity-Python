@@ -1,0 +1,177 @@
+{% load static %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AICTE Activity Point Imaplementation For Engg Student</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'images/ngo_logo.png' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* Custom CSS styles */
+    body {
+      background-color: #FFF369;
+      color: #07122B; /* Changed text color */
+    }
+    .navbar {
+      background-color: #FFF369;
+      color: #07122B; /* Changed text color */
+    }
+    .banner {
+      max-width:900px;
+      {% comment %} height:500px; {% endcomment %}
+      margin:0 auto;
+    }
+
+    .banner img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .section {
+      padding: 50px 0;
+      border-bottom: 2px solid #000;
+    }
+    .section:first-child {
+      border-top: none;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #07122B; /* Changed text color */
+    }
+    .section-content {
+      text-align: justify;
+    }
+    .ceo-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+      border: 5px solid #FFF369;
+      transition: transform 0.3s ease-in-out;
+      height: 50%;
+
+    }
+    .ceo-image:hover {
+      transform: scale(1.1);
+    }
+    .footer {
+      background-color: #FFF369;
+      color: #07122B; /* Changed text color */
+      text-align: center;
+      padding: 20px 0;
+    }
+    .social-icons a {
+      color: #07122B; /* Changed text color */
+      font-size: 24px;
+      margin: 0 10px;
+      transition: color 0.3s ease-in-out;
+    }
+    .social-icons a:hover {
+      color: #FFF369;
+    }
+    @media only screen and (min-width: 992px) {
+      #navbarSupportedContent {
+        margin-left: 34%;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      #side_image {
+        height:35%;
+        width:90%;
+        margin:5%;
+      }
+    }
+    
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <p class="section-content">AICTE Activity Point Imaplementation For Engg Student</p>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">What</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Where</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">How</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Who</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="banner">
+<!--  <h1 class="display-4">Welcome to Our Website</h1>-->
+  <img src="{% static 'images/side_1.png' %}" id="side_image">
+</div>
+
+<div class="container section">
+  <h2 class="section-title">What</h2>
+  <div class="row">
+    <div class="col-md-12">
+<!--      <h3>Service 1</h3>-->
+      <p class="section-content">We are a team of Social Innovation passionate. We have varied industrial experience in the past 10+ years. Our expertise are blended under LGS Social Innovation and Research Centre, an unit of LGS Trust(R) to research and develop practically implementable solution to the existing Social Problem.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-light section">
+  <div class="container">
+    <h2 class="section-title">Board of Trustees:</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{% static 'images/owner.jpeg' %}" alt="Team Member 1" class="ceo-image">
+        <h4>President – Mr. SHIVANNA B G</h4>
+        <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit sit amet justo vehicula efficitur. Fusce non leo sit amet urna luctus iaculis.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'images/owner.jpeg' %}" alt="Team Member 2" class="ceo-image">
+        <h4>Secretary – Mr. Harsha</h4>
+        <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit sit amet justo vehicula efficitur. Fusce non leo sit amet urna luctus iaculis.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'images/owner.jpeg' %}" alt="Team Member 3" class="ceo-image">
+        <h4>Treasurer – Mrs. KOWSALYA B</h4>
+        <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit sit amet justo vehicula efficitur. Fusce non leo sit amet urna luctus iaculis.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Connect with us on:</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,39 @@
+{% extends 'website/base.html' %}
+{% block content %}
+{% load static %}
+
+    
+    <div class="container section">
+      <h2 class="section-title">What</h2>
+      <div class="row">
+        <div class="col-md-12">
+    <!--      <h3>Service 1</h3>-->
+          <p class="section-content">We are a team of Social Innovation passionate. We have varied industrial experience in the past 10+ years. Our expertise are blended under LGS Social Innovation and Research Centre, an unit of LGS Trust(R) to research and develop practically implementable solution to the existing Social Problem.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container-fluid bg-light section">
+      <div class="container">
+        <h2 class="section-title">Board of Trustees:</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{% static 'images/owner.jpeg' %}" alt="Team Member 1" class="ceo-image">
+            <h4>President – Mr. SHIVANNA B G</h4>
+            <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit sit amet justo vehicula efficitur. Fusce non leo sit amet urna luctus iaculis.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static 'images/owner.jpeg' %}" alt="Team Member 2" class="ceo-image">
+            <h4>Secretary – Mr. Harsha</h4>
+            <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit sit amet justo vehicula efficitur. Fusce non leo sit amet urna luctus iaculis.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="{% static 'images/owner.jpeg' %}" alt="Team Member 3" class="ceo-image">
+            <h4>Treasurer – Mrs. KOWSALYA B</h4>
+            <p class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel elit sit amet justo vehicula efficitur. Fusce non leo sit amet urna luctus iaculis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endblock content %}

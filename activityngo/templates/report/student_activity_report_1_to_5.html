@@ -1,0 +1,736 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+	<title>Invoice</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		* {
+			box-sizing: border-box;
+			font-family: 'Times New Roman', Times, serif;
+			font-style: normal;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+
+
+		td {
+			padding: 5px 15px;
+		}
+
+		.student_name td {
+			border: 1px solid #000;
+		}
+
+		h1 {
+			font-size: 50px;
+			line-height: 65px;
+			margin-bottom: 0;
+			font-weight: 700; /* Change font-weight to 700 for bold */
+		}
+
+		.main {
+			padding: 2.25rem 3rem;
+			height: 1350px;
+		}
+
+		h3 {
+			font-size: 38px;
+			line-height: 40px;
+			font-weight: 500;
+			margin-bottom: 0;
+		}
+
+		span {
+			font-size: 25px;
+			line-height: 30px;
+			font-weight: 500;
+		}
+
+		p {
+			font-size: 20px;
+			font-weight: 500;
+			line-height: 30px;
+		}
+
+		h4 {
+			font-size: 24px;
+			line-height: 32px;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+
+		.page-break {
+			page-break-before: always;
+		}
+
+		.main {
+			height: 1350px;
+			position:relative;
+		}
+
+		.main_bg {
+			height: 1350px;
+		}
+		h4 {
+			font-size:30px !important;
+			line-height: 32px;
+			margin-bottom: 0;
+			font-weight: 700;
+		}
+		h5{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		li{
+            font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+        }
+		h2{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		td{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		p{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+
+	</style>
+</head>
+
+<body>
+	{# Page 1 #}
+    <div class="main" style="width: 100%; min-height: 200vh; position: relative; margin-bottom:30px, box-sizing: border-box; border: 2px solid #000;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="text-align:center;">
+						<h1 style="margin-top:50px;font-weight: 510;">AICTE Activity Points Report</h1>
+						<h1 style="margin-top:40px;font-weight: 510;">Proof of Student Activities</h1>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 150px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center;">
+						<h1 style="font-weight: 510;margin-top:50px;">Implementation Support</h1>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 50px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center;">
+						<h3>{{ ngo_name }} </h3>
+						<span>{{ state_name }} &#45; 560091</span>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 50px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center;">
+						<h1 style="font-weight: 510;margin-top:150px;">Student Details </h1>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center;">
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 24px !important;">Name</td>
+								<td style="font-size: 24px !important;">{{ user.fullname }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 24px !important;">Student <br>USN / ID</td>
+								<td style="font-size: 24px !important;">{{ user.student_details.id_number }} </td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+			</table>
+            <div style="position: absolute; bottom: 2%; right: 5%;">&#x2170;</div>
+		</div>
+	</div>
+	{# Page 2 #}
+	<div class="main page-break" style="width: 100%; min-height: 100vh; position: relative; box-sizing: border-box; border: 2px solid #000;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				
+				<tr>
+					<td style="text-align:center">
+						<h4 style="font-weight: 600;">Student Details</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						<p style="text-align:justify;line-height:1.5;">The student has registered at {{ ngo_name }}, a registered NGO for the implementation of AICTE Activity Points Project. The
+							implementation support is provided by the {{ ngo_name }} as per the guidelines of AICTE and University regarding the AICTE
+							Activity Points. The aid of Kanaja Naturals LLP is received for the software support needed
+							during the implementation. Following are the registered Student details.</p>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="center">
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Student Name</td>
+								<td style="font-size: 18px;font-weight: normal;">{{ user.fullname }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: 600;">Student USN / ID</td>
+								<td style="font-size: 18px;font-weight: normal;">{{ user.student_details.id_number }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: 600;">Batch</td>
+								<td style="font-size: 18px;font-weight: normal;">{{ user.student_details.batch.batches.start_year }} - {{ order_detail.order.user.student_details.batch.batches.end_year }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: 600;">Branch</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ user.student_details.branch.branch.name }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: 600;">Degree</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ user.student_details.degree.degree.name }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: 600;">College Name</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ user.student_details.college.name }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: 600;">University </td>
+								<td style="font-size: 18px;font-weight: 500;">{{ user.student_details.university.name }}</td>
+							</tr>
+
+						</table>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+
+					<td align="center">
+
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Program</td>
+								<td style="font-size: 18px;font-weight: 500;">AICTE Activity Points</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Activity Category</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.category.name }}</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Activity Name</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.title }}
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Activity Type</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_points }} Points</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Implemented Year</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ implementation_batch.start_year }} - {{ implementation_batch.end_year }}</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+
+					<td align="center">
+
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">Implementation Duration</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ order_detail.activity_subscribed_date|date:"d/m/y"  }} - {{ order_detail.activity_completed_date|date:"d/m/y" }}</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">No. of Days</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ request_data.number_of_days }}</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: 600;">No. of Hours</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_activity_hours }} Hours
+								</td>
+							</tr>
+							
+
+
+						</table>
+
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div style="position: absolute; bottom: 2%; right: 5%;">&#x2171;</div>
+	</div>
+	{# Page 3 #}
+	<div class="main page-break" style="width:100%;min-height: 100%;border:2px solid #000; box-sizing: border-box;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				
+				<tr>
+					<td style="text-align:center">
+						<h4 style="font-weight: bold;">Disclaimer</h4>
+					</td>
+				</tr>
+
+				<tr>
+					<td align="left">
+						{{ project_report_content.disclaimer|safe }}
+					</td>
+				</tr>
+
+			</table>
+			<div style="position: absolute; bottom: 2%; right: 5%;">iii</div> 
+		</div>
+	</div>
+	{# Page 4 #}
+	<div class="main page-break" style="width:100%;min-height: 100%;border:2px solid #000; box-sizing: border-box;">
+		<div class="main_bg" style="">
+			<table style="width: 100%;border-collapse: collapse;">
+
+				<tr>
+					<td style="height: 50px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">
+						<h4 style="font-weight: bold;font-size:34px !important;">Abstract</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="left">
+						{{ project_report_content.abstract|safe }}
+					</td>
+				</tr>
+			</table>
+			<div style="position: absolute; bottom: 2%; right: 5%;">iv</div>
+		</div>
+	</div>
+	{# Page 5 #}
+	<div class="main page-break" style="width:100%;border:2px solid #000">
+		{% if order_detail.number_of_points == "points_20" %}
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="text-align:center;">
+						<h4 style="font-weight: bold;">Activity Implementation Plan</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Activity Name:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.title }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: bold;">Activity Category as per AICTE<br>
+									Activity Points:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.category.name }}
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Total Hours of Involvement:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_activity_hours }} Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Total Activity Point Earned by this<br>
+									Project:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_points }} Points</td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;text-decoration: underline;">Implementation Plan:</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="">
+						<table class=" student_name" style="width: 100%;">
+				<tr>
+					<td rowspan="2" valign="middle"
+						style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Task <br> Number
+					</td>
+					<td rowspan="2" valign="middle"
+						style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Particular</td>
+					<td colspan='2' style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">20
+						AICTE Activity Points ({{ number_of_activity_hours }} Hours)</td>
+				</tr>
+				<tr>
+
+					<td  style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Duration </td>
+						<td  style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Activity to
+							be
+							done</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 01</td>
+					<td style="font-size: 18px;font-weight: 500;">Theory / Video Lecture</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Videos</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 02</td>
+					<td style="font-size: 18px;font-weight: 500;">Case Study Questions</td>
+					<td style="font-size: 18px;font-weight: 500;">20 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">20 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 03</td>
+					<td style="font-size: 18px;font-weight: 500;">Public Survey</td>
+					<td style="font-size: 18px;font-weight: 500;">20 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Survey with 10 Persons</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 04</td>
+					<td style="font-size: 18px;font-weight: 500;">Field Visit</td>
+					<td style="font-size: 18px;font-weight: 500;">10 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">1 Day</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 05</td>
+					<td style="font-size: 18px;font-weight: 500;">Solution as Beneficiary</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 06</td>
+					<td style="font-size: 18px;font-weight: 500;">Solution as Law Maker (Govt)</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 07</td>
+					<td style="font-size: 18px;font-weight: 500;">Solution as an Engineer</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 08</td>
+					<td style="font-size: 18px;font-weight: 500;">Start Up Idea</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 09</td>
+					<td style="font-size: 18px;font-weight: 500;">Financial Analysis</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Investment - Return</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 10</td>
+					<td style="font-size: 18px;font-weight: 500;">Exit Test</td>
+					<td style="font-size: 18px;font-weight: 500;">01 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">MCQ Test</td>
+				</tr>
+				<tr>
+					<td style="font-size: 18px;font-weight: 500;"></td>
+					<td style="font-size: 18px;font-weight: 500;">ACTIVITY Report</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Proof of Activities</td>
+				</tr>
+			</table>
+			</td>
+			</tr>
+			</table>
+		</div>
+		{% elif order_detail.number_of_points == "points_10" %}
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="text-align:center;">
+						<h4 style="font-weight: bold;">Activity Implementation Plan</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Activity Name:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.title }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: bold;">Activity Category as per AICTE<br>
+									Activity Points:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.category.name }}
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Total Hours of Involvement:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_activity_hours }} Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Total Activity Point Earned by this<br>
+									Project:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_points }} Points</td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;text-decoration: underline;">Implementation Plan:</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="">
+						<table class=" student_name" style="width: 100%;">
+				<tr>
+					<td rowspan="2" valign="middle"
+						style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Task <br> Number
+					</td>
+					<td rowspan="2" valign="middle"
+						style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Particular</td>
+					<td colspan='2' style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">10
+						AICTE Activity Points ({{ number_of_activity_hours }} Hours)</td>
+				</tr>
+				<tr>
+
+					<td  style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Duration </td>
+						<td  style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Activity to
+							be
+							done</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 01</td>
+					<td style="font-size: 18px;font-weight: 500;">Theory / Video Lecture</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Videos</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 02</td>
+					<td style="font-size: 18px;font-weight: 500;">Case Study Questions</td>
+					<td style="font-size: 18px;font-weight: 500;">10 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">10 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 03</td>
+					<td style="font-size: 18px;font-weight: 500;">Public Survey</td>
+					<td style="font-size: 18px;font-weight: 500;">10 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Survey with 06 Persons</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 04</td>
+					<td style="font-size: 18px;font-weight: 500;">Field Visit</td>
+					<td style="font-size: 18px;font-weight: 500;">10 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">1 Day</td>
+				</tr>
+			
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 05</td>
+					<td style="font-size: 18px;font-weight: 500;">Solution as an Engineer</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Questions</td>
+				</tr>
+	
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 06</td>
+					<td style="font-size: 18px;font-weight: 500;">Exit Test</td>
+					<td style="font-size: 18px;font-weight: 500;">01 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">MCQ Test</td>
+				</tr>
+				<tr>
+					<td style="font-size: 18px;font-weight: 500;"></td>
+					<td style="font-size: 18px;font-weight: 500;">ACTIVITY Report</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Proof of Activities</td>
+				</tr>
+			</table>
+			</td>
+			</tr>
+			</table>
+		</div>
+		{% else %}
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="text-align:center;">
+						<h4 style="font-weight: bold;">Activity Implementation Plan</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">
+						<table class="student_name" style="width: 100%;">
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Activity Name:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.title }}</td>
+							</tr>
+							<tr>
+
+								<td style="font-size: 18px;font-weight: bold;">Activity Category as per AICTE<br>
+									Activity Points:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ project.category.name }}
+								</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Total Hours of Involvement:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_activity_hours }} Hours</td>
+							</tr>
+							<tr>
+								<td style="font-size: 18px;font-weight: bold;">Total Activity Point Earned by this<br>
+									Project:</td>
+								<td style="font-size: 18px;font-weight: 500;">{{ number_of_points }} Points</td>
+							</tr>
+						</table>
+
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;text-decoration: underline;">Implementation Plan:</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 30px;"></td>
+				</tr>
+				<tr>
+					<td align="">
+						<table class=" student_name" style="width: 100%;">
+				<tr>
+					<td rowspan="2" valign="middle"
+						style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Task <br> Number
+					</td>
+					<td rowspan="2" valign="middle"
+						style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Particular</td>
+					<td colspan='2' style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">05
+						AICTE Activity Points ({{ number_of_activity_hours }} Hours)</td>
+				</tr>
+				<tr>
+
+					<td  style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Duration </td>
+						<td  style="font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">Activity to
+							be
+							done</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 01</td>
+					<td style="font-size: 18px;font-weight: 500;">Theory / Video Lecture</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Videos</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 02</td>
+					<td style="font-size: 18px;font-weight: 500;">Case Study Questions</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">05 Questions</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 03</td>
+					<td style="font-size: 18px;font-weight: 500;">Public Survey</td>
+					<td style="font-size: 18px;font-weight: 500;">10 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Survey with 06 Persons</td>
+				</tr>
+				<tr>
+
+					<td style="font-size: 18px;font-weight: 500;">Task No. 04</td>
+					<td style="font-size: 18px;font-weight: 500;">Exit Test</td>
+					<td style="font-size: 18px;font-weight: 500;">1 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">MCQ Test</td>
+				</tr>
+				<tr>
+					<td style="font-size: 18px;font-weight: 500;"></td>
+					<td style="font-size: 18px;font-weight: 500;">ACTIVITY Report</td>
+					<td style="font-size: 18px;font-weight: 500;">02 Hrs</td>
+					<td style="font-size: 18px;font-weight: 500;">Proof of Activities</td>
+				</tr>
+			</table>
+			</td>
+			</tr>
+			</table>
+		</div>
+		{% endif %}
+		
+		<div style="position: absolute; bottom: 2%; right: 5%;">v</div>
+	</div>
+</body>
+
+</html>

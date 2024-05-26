@@ -1,0 +1,681 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+    <title>Invoice</title>
+    <style type="text/css">
+        @page:first {
+            border: 2px solid black;
+        }
+
+        @font-face {
+            font-style: normal;
+            font-weight: 500;
+            src: url('http://3.7.8.99/webdesign/activity_app/fonts/roman.ttf');
+            /* IE9 Compat Modes */
+            src: url('http://3.7.8.99/webdesign/activity_app/fonts/roman.ttf') format('truetype');
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+		* {
+			box-sizing: border-box;
+			font-family: 'Times New Roman', Times, serif;
+			font-style: normal;
+		}
+
+        table {
+            border-collapse: collapse;
+        }
+
+
+        td {
+            padding: 5px 15px;
+        }
+
+        .student_name td {
+            border: 1px solid #000;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 65px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .main {
+            padding: 2.25rem 3rem;
+        }
+
+        h3 {
+            font-size: 38px !important;
+            line-height: 40px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size:30px !important;
+            line-height: 32px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+		.main{
+			height:auto;
+		}
+		.main_bg{
+			height:auto;
+		}
+		
+		h5{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+			margin-bottom:0 !important;
+			margin: 0 !important;;
+		}
+		li{
+            font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+        }
+		h2{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		td{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+		}
+		p{
+			font-size: 22px !important;
+			text-align:justify;
+			line-height:1.5;
+			margin: 0 !important;
+		}
+    
+    
+    </style>
+</head>
+
+<body>
+
+    {# Page 23 This is Task Number 4 #}
+
+    <!-- Placeholder for header -->
+	{% if essay_question_data_4 %}
+    <div class="main" style="width:100%;overflow-wrap: break-word;">
+        <div class="main_bg">
+            <table style="width: 100%;border-collapse: collapse;display:block;">
+                {% comment %} header section {% endcomment %}
+               
+
+                {% comment %} main content section {% endcomment %}
+				<tbody style="display: block;width: 100%">
+                {% for item in short_question_data_task_4 %}
+                    <tr style="display:block;">
+                        <td align="left" style="display:block;">
+                            <h5 style="font-weight: bold;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style="font-size: 20px;margin: 0;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+                {% for item in essay_question_data_4 %}
+                    <tr style="display:block;">
+                        <td align="left" style="display:block;">
+                            <h5 style="font-weight: bold;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style="font-size: 20px;margin: 0;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+				</tbody>
+            </table>
+        </div>
+    </div>
+	{% endif %}
+	{% if essay_question_data_5 %}
+    {# Page 24 This is Task Number 5 #}
+	<div class="main page-break" style="width:100%;overflow-wrap: break-word;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;display:block;">
+				<tbody style="width: 100%">
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;font-size: 30px;margin-top:0;">Appendix 03
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						{% if order_detail.number_of_points == "points_20" %}
+							<h4 style="font-weight: bold;text-align: center">Provide Solution as Beneficiary </h4>
+						{% else %}
+							<h4 style="font-weight: bold;text-align: center">Provide Solution as ENGINEER </h4>
+						{% endif %}
+						
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				{% for item in essay_question_data_5 %}
+                    <tr style="display:block;">
+                        <td align="left" style="display:block;">
+                            <h5 style="font-weight: bold;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style=";margin: 0;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+
+			</tbody>
+			</table>
+		</div>
+	</div>
+	{% endif %}
+    {# Page 25 This is Task Number 6#}
+	{% if essay_question_data_6 %}
+	<div class="main page-break" style="width:100%;overflow-wrap: break-word;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;display:block;">
+				<tbody style="width: 100%">
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;font-size: 30px;margin-top:0;">Appendix 04
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h4 style="font-weight: bold;font-size: 30px;text-align: center">Provide Solution as Law Maker (Govt) </h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+                {% for item in essay_question_data_6 %}
+                    <tr style="display:block;">
+                        <td align="left" style="display:block;">
+                            <h5 style="font-weight: bold;font-size: 27px;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style="font-size: 20px;margin: 0;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+
+                {% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+	{% endif %}
+    {# Page 26 This is Task Number 7#}
+	{% if essay_question_data_7 %}
+	<div class="main page-break" style="width:100%;overflow-wrap: break-word;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;display:block;">
+				<tbody style="width: 100%">
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;font-size: 30px;margin-top:0;">Appendix 05
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h4 style="font-weight: bold;font-size: 30px;text-align: center">Provide Solution as Engineer </h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+                {% for item in essay_question_data_7 %}
+                    <tr style="display:block;">
+                        <td align="left" style="display:block;">
+                            <h5 style="font-weight: bold;font-size: 27px;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style="font-size: 20px;margin: 0;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+	{% endif %}
+    {# Page 27 This is Task Number 8#}
+	{% if essay_question_data_8 %}
+	<div class="main page-break" style="width:100%;overflow-wrap: break-word;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;display:block;">
+				<tbody style="width: 100%">
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;font-size: 30px;margin-top:0;">Appendix 06
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h4 style="font-weight: bold;font-size: 30px;text-align: center">Provide Startup Idea to Resolve the Issue </h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+                {% for item in essay_question_data_8 %}
+                    <tr style="display:block;">
+                        <td align="left" style="display:block;">
+                            <h5 style="font-weight: bold;font-size: 27px;">{{ item.question.sub_task_number }}&rpar; {{ item.question.question }}
+                            </h5>
+                            <p style="font-size: 20px;margin: 0;">{{ item.answer }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+	{% endif %}
+    {# Page 28 This is Task Number 9 #}
+	{% if task_9_data %}
+	<div class="main page-break" style="width:100%;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				
+
+				<tr>
+					<td align="left">
+						<h4 style="font-weight: bold;font-size: 30px;margin-top:0;">Appendix 07
+						</h4>
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<h4 style="font-weight: bold;	;text-align: center">Financial Analysis of the Proposed Startup</h4>
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 20px;"></td>
+				</tr>
+				<tr>
+					<td align="left">
+						<p style="font-size: 20px;margin: 0;">Financial Analysis is made for the Startup Idea provided
+							by Student to resolve the issue.
+							Following details are presented here. </p>
+
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+
+						<p style="font-size: 20px;margin: 0;">
+							1) List of Investment and Financial requisites along with Revenue Model
+						</p>
+						<p style="font-size: 20px;margin: 0;">
+							2) Generated Balance Sheet, Income sheet for the projected 3 years.
+
+						</p>
+						<p style="font-size: 20px;margin: 0;">
+							All these data are as per student understanding and is used only for Education Purpose.
+						</p>
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td>
+						<h4 style="font-weight: bold;font-size: 28px !important;">List of Investment, Financial requisites along
+							with Revenue Model
+						</h4>
+
+
+					</td>
+
+				</tr>
+				<tr>
+					<td style="">
+						<table class="student_name" style="width: 80%;margin-left:10%;margin-right:10%;">
+							<tbody>
+								<tr>
+									<td colspan="2" valign="middle"
+										style="font-weight:bold;text-align: center;font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+										Projected Company Details </td>
+
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Projected Company Details</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.name_of_the_company.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Location of the Company </td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.location_of_the_company.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Sector of the Company</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.sector_of_the_company.answer }}</td>
+
+								</tr>
+
+
+
+
+							</tbody>
+						</table>
+
+					</td>
+
+				</tr>
+				<tr>
+					<td style="">
+						<table class="student_name"
+							style="width: 80%;margin-left:10%;margin-right:10%;margin-top: 20px;margin-bottom: 20px;">
+							<tbody>
+								<tr>
+									<td colspan="2" valign="middle"
+										style="font-weight:bold;text-align: center;font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+										Projected Company CAPEX Details
+									</td>
+
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Source of Investment (in Rs) </td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.source_of_investment.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Office Advance (in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.office_advance.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Company Establishment Fee (in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.company_establishment_fee.answer }}</td>
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Number of Staff </td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.no_of_staff.answer }} </td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Office Infrastructure Expenses
+										(Interior, System etc) (in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.office_infrastructure_expenses.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Software Development Expenses (in Rs.)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.software_development_expenses.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Hardware Machine Expenses (in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.hardware_machine_expenses.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Total Capital Expenses (in Rs) </td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.total_capital_expenses.answer }}</td>
+
+								</tr>
+
+
+
+
+							</tbody>
+						</table>
+
+					</td>
+
+				</tr>
+
+				
+
+                
+			</table>
+		</div>
+	</div>
+	<div class="main page-break" style="width:100%;">
+		<div class="main_bg">
+			<table style="width: 100%;border-collapse: collapse;">
+				<tr>
+					<td style="">
+						<table class="student_name" style="width: 80%;margin-left:10%;margin-right:10%;">
+							<tbody>
+								<tr>
+									<td colspan="2" valign="middle"
+										style="font-weight:bold;text-align: center;font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+										Projected Company OPEX Details </td>
+
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Office Rent per Month (in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.office_rent_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Total Staff Salary per Month (in Rs)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.total_staff_salary_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Marketing Expenses per Month (in Rs)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.marketing_expenses_month.answer }}</td>
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Software Operating Expenses per Month
+										(in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.software_operating_expenses_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Hardware Machine Operating Expenses
+										per Month (in Rs) </td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.hardware_machine_operating_expenses_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Auditor Expenses per Month (in Rs)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.auditor_Expenses_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Electricity Expenses per Month (in Rs)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.electricity_expenses_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Internet Expenses per Month (in Rs)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.internet_expenses_month.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Total operational Expenses per Month
+										(in Rs)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.total_operational_expenses.answer }}</td>
+
+								</tr>
+
+
+							</tbody>
+						</table>
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td style="">
+						<table class="student_name"
+							style="width: 80%;margin-left:10%;margin-right:10%;margin-top: 20px;margin-bottom: 20px;">
+							<tbody>
+								<tr>
+									<td colspan="2" valign="middle"
+										style="font-weight:bold;text-align: center;font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+										Projected Company Sales Details </td>
+
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Total Sale Amount per Month (in Rs)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.total_sale_amount_month.answer }}</td>
+
+								</tr>
+
+
+
+							</tbody>
+						</table>
+
+					</td>
+
+				</tr>
+
+
+				<tr>
+					<td style="">
+						<table class="student_name"
+							style="width: 80%;margin-left:10%;margin-right:10%;margin-top: 20px;margin-bottom: 20px;">
+							<tbody>
+								<tr>
+									<td colspan="2" valign="middle"
+										style="font-weight:bold;text-align: center;font-size: 18px;font-weight: bold;background: #d9d9d9;padding: 10px;">
+										Projected Company Sales Projection Details</td>
+
+
+								</tr>
+
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Increase Percentage in Sales (FY 2)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.increase_percentage_in_sales_financial_year_2.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Increase Percentage in Investment (FY
+										2)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.increase_percentage_in_investment_financial_year_2.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Increase Percentage in Sales (FY 3)
+									</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.increase_percentage_in_sales_financial_year_3.answer }}</td>
+
+								</tr>
+								<tr>
+
+									<td style="font-size: 18px;font-weight: 500;">Increase Percentage in Investment (FY
+										3)</td>
+									<td style="font-size: 18px;font-weight: 500;">{{ task_9_data.increase_percentage_in_investment_financial_year_3.answer }}</td>
+
+								</tr>
+
+
+
+							</tbody>
+						</table>
+
+					</td>
+
+				</tr>
+
+				<tr>
+					<td >
+						<h4 style=" font-weight: bold;font-size: 28px !important;text-align: center;">Generated Balance Sheet, Income Sheet for the
+						Projected 3 Years</h4>
+						<p style="font-size: 20px;margin: 0;">The balance sheet or Profit and Loss sheet prepared here
+							are for educational purpose. The
+							data is created as per the data provided by the student. This helps in understanding the
+							practical terms of Incubation and Startups.
+						</p>
+
+						<p style="font-size: 20px;margin: 0;">All the data here are as per student assumption. Reaching
+							the numbers specified is up to the
+							marketing strategy of the Student. However the Balance and Income sheet is generated as
+							per the data entered
+						</p>
+					</td>
+				</tr>
+				
+			</table>
+		</div>
+	</div>
+				
+	{% endif %}
+
+    </body>
+
+</html>

@@ -1,0 +1,3996 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Invoice</title>
+    <style type="text/css">
+      @font-face {
+        font-family: "new roman";
+        font-style: normal;
+        font-weight: 500;
+        src: url("http://3.7.8.99/webdesign/activity_app/fonts/roman.ttf");
+        /* IE9 Compat Modes */
+        src: url("http://3.7.8.99/webdesign/activity_app/fonts/roman.ttf")
+          format("truetype");
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      * {
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: normal;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+
+      td {
+        padding: 5px 15px;
+      }
+
+      .student_name td {
+        border: 1px solid #000;
+      }
+
+      h1 {
+        font-size: 50px;
+        line-height: 65px;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+
+      
+
+      h3 {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+
+      h4 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 0;
+        font-weight: 700;
+      }
+      /* Code Here See */
+      .round_this {
+        /* transform: rotateZ(-90deg) scale(0.75, 1); */
+        transform: rotateZ(-90deg);
+      }
+
+      .main {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .main_bg {
+        height: auto;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    </style>
+  </head>
+
+  <body>
+    {# Page 29 this is task 9#}
+    <div class="main" style="width: 100%; height: auto">
+      <div class="main_bg round_this">
+        <table style="width: 100%; border-collapse: collapse">
+          <tr>
+            <td style="height: 2300px">
+              <table style="width: 100%; border-collapse: collapse">
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                    "
+                  >
+                    Balance Sheet for 3 Years
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      border: 2px solid #000;
+                      height: 30px;
+                      border-bottom: 0px;
+                    "
+                  ></td>
+                </tr>
+              </table>
+              <table style="width: 100%; border-collapse: collapse">
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  >
+                    Company Name
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  >
+                    {{ task_9_data.name_of_the_company.answer }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  >
+                    Company Location
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  >
+                  {{ task_9_data.location_of_the_company.answer }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  ></td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  >
+                    Period Considered
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  >
+                    Financial Year (Apr 1 to Mar 31)
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      height: 30px;
+                      width: 33%;
+                    "
+                  ></td>
+                </tr>
+              </table>
+              <table style="width: 100%; border-collapse: collapse">
+                <tr>
+                  <td
+                    style="
+                      border: 2px solid #000;
+                      border-top: 0px;
+                      height: auto;
+                      width: 100%;
+                    "
+                  ></td>
+                </tr>
+              </table>
+              <table style="width: 100%; border-collapse: collapse">
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    ASSETS (in INR)
+                  </td>
+                </tr>
+              </table>
+              <table style="width: 100%; border-collapse: collapse">
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    Particular
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    Particular
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    FY-1
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    FY-2
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    FY-3
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    Particular
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    FY-1
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    FY-2
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      height: 30px;
+                      background: #d8d8d8;
+                      border-top: 0px;
+                    "
+                  >
+                    FY-3
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      vertical-align: middle;
+                      font-size: 18px;
+                      font-weight: 500;
+                      width: 11%;
+                      border: 2px solid #000;
+                    "
+                  >
+                    Current Assets
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                          Cash
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          Accounts Receivable
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          Inventory
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            height: auto;
+                          "
+                        >
+                          Prepaid Expenses
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          Short Term Investments
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                          {{ calculate_financials.Cash|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            height: auto;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Cash2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Accounts_Receivable2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            height: auto;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Cash3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Accounts_Receivable3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            height: auto;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          0.00
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                    Total Current Assets
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Current_Assets|floatformat:"2" }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Current_Assets2|floatformat:"2" }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Current_Assets3|floatformat:"2" }}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      vertical-align: middle;
+                      font-size: 18px;
+                      font-weight: 500;
+                      width: 11%;
+                      border: 2px solid #000;
+                    "
+                  >
+                    Fixed (Long Term) Assets
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                          Long Term Investments
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          Property, Plant and Equipment (Less Depreciation)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            height: auto;
+                          "
+                        >
+                          Intangible Assets (Less Depreciation)
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                          {{ calculate_financials.Long_Term_Investments|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Property_Plant_and_Equipment|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Intangible_Assets|floatformat:"2" }}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Long_Term_Investments2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Property_Plant_and_Equipment2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Intangible_Assets2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Long_Term_Investments3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Property_Plant_and_Equipment3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Intangible_Assets3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                    Total Fixed Assets
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                    {{ calculate_financials.Total_Fixed_Assets|floatformat:"2" }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Fixed_Assets2|floatformat:"2" }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Fixed_Assets3|floatformat:"2" }}
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="
+                      text-align: center;
+                      vertical-align: middle;
+                      font-size: 18px;
+                      font-weight: 500;
+                      width: 11%;
+                      border: 2px solid #000;
+                    "
+                  >
+                    Other Assets
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                          Income Tex
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                          Other
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Income_Tax|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Other|floatformat:"2" }}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Income_Tax2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Other2|floatformat:"2" }}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="text-align: left; vertical-align: middle; padding: 0"
+                  >
+                    <table style="width: 100%; border-collapse: collapse">
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                            border-top: 0;
+                          "
+                        >
+                        {{ calculate_financials.Income_Tax3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            text-align: center;
+                            font-size: 18px;
+                            font-weight: 500;
+                            border: 2px solid #000;
+                            border-left: 0;
+                          "
+                        >
+                        {{ calculate_financials.Other3|floatformat:"2" }}
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 600;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                    Total Other Assets
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Other_Assets|floatformat:"2" }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Other_Assets2|floatformat:"2" }}
+                  </td>
+                  <td
+                    style="
+                      text-align: center;
+                      font-size: 20px;
+                      font-weight: 500;
+                      border: 2px solid #000;
+                      border-left: 0;
+                      height: 30px;
+                      border-top: 0px;
+                    "
+                  >
+                  {{ calculate_financials.Total_Other_Assets3|floatformat:"2" }}
+                  </td>
+                </tr>
+                <table style="width: 100%; border-collapse: collapse">
+                  <tr>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    ></td>
+                  </tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse">
+                  <tr>
+                    <td
+                      colspan="6"
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      Total Assets
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                    {{ calculate_financials.Total_Assets|floatformat:"2" }}
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                    {{ calculate_financials.Total_Assets2|floatformat:"2" }}  
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                    {{ calculate_financials.Total_Assets3|floatformat:"2" }}
+                    </td>
+                  </tr>
+                </table>
+
+                <table style="width: 100%; border-collapse: collapse">
+                  <tr>
+                    <td
+                      style="
+                        height: 20px;
+                        border-left: 2px solid #000;
+                        border-right: 2px solid #000;
+                        height: 30px;
+                      "
+                    ></td>
+                  </tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse">
+                  <tr>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                      "
+                    >
+                      LIABILITIES and OWNER's EQUITY (in INR)
+                    </td>
+                  </tr>
+                </table>
+                <table style="width: 100%; border-collapse: collapse">
+                  <tr>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      Particular
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      Particular
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      FY-1
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      FY-2
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      FY-3
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      Particular
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      FY-1
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      FY-2
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        height: 30px;
+                        background: #d8d8d8;
+                        border-top: 0px;
+                      "
+                    >
+                      FY-3
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        text-align: center;
+                        vertical-align: middle;
+                        font-size: 18px;
+                        font-weight: 500;
+                        width: 11%;
+                        border: 2px solid #000;
+                      "
+                    >
+                      Current Liabilities
+                    </td>
+                    <td
+                      style="
+                        text-align: left;
+                        vertical-align: middle;
+                        padding: 0;
+                      "
+                    >
+                      <table style="width: 100%; border-collapse: collapse">
+                        <tr>
+                          <td
+                            style="
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              border-top: 0;
+                            "
+                          >
+                            Accounts Payable
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                            Short Term Loans
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                            Income Taxes Payable
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              height: auto;
+                            "
+                          >
+                            Accrued Salary & Wages
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                            Unearned Revenue
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                            Current Portion of Long Term Debt
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td
+                      style="
+                        text-align: left;
+                        vertical-align: middle;
+                        padding: 0;
+                      "
+                    >
+                      <table style="width: 100%; border-collapse: collapse">
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              border-top: 0;
+                            "
+                          >
+                            {{ calculate_financials.Accounts_Payable|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Short_Term_Loans|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Income_Taxes_Payable|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Accrued_Salary_Wages|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              height: auto;
+                            "
+                          >
+                          {{ calculate_financials.Unearned_Revenue|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Current_Portion_of_Long_Term_Debt|floatformat:"2" }}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td
+                      style="
+                        text-align: left;
+                        vertical-align: middle;
+                        padding: 0;
+                      "
+                    >
+                      <table style="width: 100%; border-collapse: collapse">
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              border-top: 0;
+                            "
+                          >
+                          {{ calculate_financials.Accounts_Payable2|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Short_Term_Loans2|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Income_Taxes_Payable2|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Accrued_Salary_Wages2|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              height: auto;
+                            "
+                          >
+                          {{ calculate_financials.Unearned_Revenue2|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Current_Portion_of_Long_Term_Debt2|floatformat:"2" }}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td
+                      style="
+                        text-align: left;
+                        vertical-align: middle;
+                        padding: 0;
+                      "
+                    >
+                      <table style="width: 100%; border-collapse: collapse">
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              border-top: 0;
+                            "
+                          >
+                          {{ calculate_financials.Accounts_Payable3|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Short_Term_Loans3|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Income_Taxes_Payable3|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                              height: auto;
+                            "
+                          >
+                          {{ calculate_financials.Accrued_Salary_Wages3|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Unearned_Revenue3|floatformat:"2" }}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            style="
+                              text-align: center;
+                              font-size: 18px;
+                              font-weight: 500;
+                              border: 2px solid #000;
+                              border-left: 0;
+                            "
+                          >
+                          {{ calculate_financials.Current_Portion_of_Long_Term_Debt3|floatformat:"2" }}
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 600;
+                        border: 2px solid #000;
+                        border-left: 0;
+                        height: 30px;
+                        border-top: 0px;
+                      "
+                    >
+                      Total Current Liabilities
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                        border: 2px solid #000;
+                        border-left: 0;
+                        height: 30px;
+                        border-top: 0px;
+                      "
+                    >
+                    {{ calculate_financials.Total_Current_Liabilities|floatformat:"2" }}
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                        border: 2px solid #000;
+                        border-left: 0;
+                        height: 30px;
+                        border-top: 0px;
+                      "
+                    >
+                    {{ calculate_financials.Total_Current_Liabilities2|floatformat:"2" }}
+                    </td>
+                    <td
+                      style="
+                        text-align: center;
+                        font-size: 20px;
+                        font-weight: 500;
+                        border: 2px solid #000;
+                        border-left: 0;
+                        height: 30px;
+                        border-top: 0px;
+                      "
+                    >
+                    {{ calculate_financials.Total_Current_Liabilities3|floatformat:"2" }}
+                    </td>
+                  </tr>
+                </table>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  {# Page 30 this is task 9#}
+  <div class="main page-break" style="width: 100%; height: auto">
+    <div class="main_bg round_this">
+      <table style="width: 100%; border-collapse: collapse">
+        <tr>
+          <td style="height: 2300px">
+            <table style="width: 100%; border-collapse: collapse">
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                  "
+                >
+                  Long Term Liabilities
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-left: 0;
+                          border-right: 0;
+                        "
+                      >
+                        Long Term Debt
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-left: 0;
+                          border-right: 0;
+                        "
+                      >
+                        Deferred Income Tax
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          height: auto;
+
+                          border-left: 0;
+                          border-right: 0;
+                        "
+                      >
+                        Others
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="padding: 0">
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                        {{ calculate_financials.Long_Term_Debt |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Deferred_Income_Tax |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                      0
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Long_Term_Debt2 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Deferred_Income_Tax2 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                        0.00
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Long_Term_Debt3 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Deferred_Income_Tax3 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                        0.00
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Total Long Term Liabilities
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Total_Long_Term_Liabilities |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Total_Long_Term_Liabilities2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Total_Long_Term_Liabilities3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    font-weight: 500;
+                    width: 11%;
+                    border: 2px solid #000;
+                  "
+                >
+                  Owner&#039;s Equity
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-left: 0;
+                          border-right: 0;
+                        "
+                      >
+                        Owner&#039;s Investment
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-left: 0;
+                          border-right: 0;
+                        "
+                      >
+                        Others
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          height: auto;
+
+                          border-left: 0;
+                          border-right: 0;
+                        "
+                      >
+                        Retained Earnings
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Owners_Investment |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                        0.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Retained_Earnings |floatformat:"2" }}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Owners_Investment2 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                        0.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Retained_Earnings2 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="text-align: left; vertical-align: middle; padding: 0"
+                >
+                  <table style="width: 100%; border-collapse: collapse">
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Owners_Investment3 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+                          border-right: 0;
+                        "
+                      >
+                        0.00
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="
+                          text-align: center;
+                          font-size: 18px;
+                          font-weight: 500;
+                          border: 2px solid #000;
+
+                          border-right: 0;
+                        "
+                      >
+                      {{ calculate_financials.Retained_Earnings3 |floatformat:"2" }}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                  Total Owner&#039;s Equity
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Total_Owner_Equity |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Total_Owner_Equity2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Total_Owner_Equity3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="9"
+                  style="
+                    width: 100%;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                ></td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                  Total Liabilities and Owner&#039;s Equity
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Total_Liabilities_and_Owners_Equity |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Total_Liabilities_and_Owners_Equity2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Total_Liabilities_and_Owners_Equity3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    height: 20px;
+                    border-left: 2px solid #000;
+                    border-right: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+              </tr>
+              <tr>
+                <td
+                  colspan="9"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  Common Financial Ratios
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                  Particualrs
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                  FY-1
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                  FY-2
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                    border-top: 0px;
+                  "
+                >
+                  FY-3
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                  Debt Ratio (Total Liabilities / Total Assets)
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Debt_Ratio_FY1 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Debt_Ratio_FY2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Debt_Ratio_FY3 |floatformat:"2" }}
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                  Current Ratio (Current Assets / Current Liabilities)
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Current_Ratio_FY1 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Current_Ratio_FY2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Current_Ratio_FY3 |floatformat:"2" }}
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                  Working Capital (Current Assets - Current Liabilities)
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Working_Capital_FY1 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Working_Capital_FY2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Working_Capital_FY3 |floatformat:"2" }}
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                  Assets-to-Equity Ratio (Total Assets / Owner&#039;s Equity)
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Assets_to_Equity_Ratio_FY1 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Assets_to_Equity_Ratio_FY2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Assets_to_Equity_Ratio_FY3 |floatformat:"2" }}
+                </td>
+              </tr>
+
+              <tr>
+                <td
+                  colspan="6"
+                  style="
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                  Debt-to-Equity Ratio (Total Liabilities / Owner&#039;s
+                  Equity)
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Debt_to_Equity_Ratio_FY1 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Debt_to_Equity_Ratio_FY2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    border-top: 0px;
+                  "
+                >
+                {{ calculate_financials.Debt_to_Equity_Ratio_FY3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr style="height: 50px"></tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Terms
+                </td>
+                <td
+                  colspan="7"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Meanings
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Debt Ratio
+                </td>
+                <td
+                  colspan="7"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    If &gt; 1.0 then company has more Debt than Asset
+                  </p>
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    If &gt; 1.0 then company has more Debt than Asset
+                  </p>
+                </td>
+              </tr>
+
+              <tr></tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Current Ratio
+                </td>
+                <td
+                  colspan="7"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    If&gt; 1.0 then company has more Asset than Liabilities
+                  </p>
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    This indicates the capacity of company to pay off its
+                    liability in short term
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Working Capital
+                </td>
+                <td
+                  colspan="7"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    This indicates amount available at present for day to day
+                    transactions
+                  </p>
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    This indicates the safe amount available at present
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Assets to Equity Ratio
+                </td>
+                <td
+                  colspan="7"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    If &gt; 1.0, then company is independent of using
+                    Shareholder Equity
+                  </p>
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    This indicates relation of Total asset to
+                    Shareholder&#039;s equity
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="2"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  Debt to Equity Ratio
+                </td>
+                <td
+                  colspan="7"
+                  style="
+                    font-size: 24px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 1px solid #000;
+                  "
+                >
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    If&gt; 1.0, then company is capable of paying debt
+                    independent of Capital money
+                  </p>
+                  <p style="padding: 0; margin: 0; font-weight: 600">
+                    This indicates risk of company associated to Capital
+                    Structure
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  colspan="9"
+                  style="border-top: 1px solid #000000; width: 100%"
+                >
+               
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  {# Page 31 this is task 9#}
+       
+  <div class="main" style="width: 100%; height: auto">
+    <div class="main_bg round_this">
+      <table style="width: 100%; border-collapse: collapse">
+        <tr>
+          <td style="height: 2300px">
+            <table style="width: 100%; border-collapse: collapse">
+              <tr>
+                <td style="height: 20px"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  colspan="9"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  Income Statement for 3 Years
+                </td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                  Company Name
+                </td>
+                <td
+                  colspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                {{ task_9_data.name_of_the_company.answer }}
+                </td>
+                <td
+                  rowspan="3"
+                  colspan="3"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                  <p
+                    style="
+                      width: 60%;
+                      margin-left: auto;
+                      margin-right: auto;
+                      padding: 15px;
+                      text-align: center;
+                      background: #d8d8d8;
+                      height: auto;
+                      border: 2px solid #000;
+                    "
+                  >
+                    <span
+                      style="
+                        font-size: 26px;
+                        font-weight: 800;
+                        display: inline-block;
+                        width: 60%;
+                      "
+                    >
+                      All Calculations in INR
+                    </span>
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                  Company Location
+                </td>
+                <td
+                  colspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                {{ task_9_data.location_of_the_company.answer }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                  Period Considered
+                </td>
+                <td
+                  colspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                    width: 33%;
+                  "
+                >
+                  Financial Year (Apr 1 to Mar 31)
+                </td>
+              </tr>
+    
+              <tr>
+                <td style="padding: 25px 0"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  Particulars
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  FY-1
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  FY-2
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  FY-3
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  Particular
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  FY-1
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  FY-2
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 700;
+                    border: 2px solid #000;
+                    height: 30px;
+                    background: #d8d8d8;
+                  "
+                >
+                  FY-3
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Net Sales
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Net_Sales|floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Net_Sales2|floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Net_Sales3|floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Gross Profit
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Gross_Profit|floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Gross_Profit2 |floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Gross_Profit3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Cost Of Sales
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Cost_of_Sales |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Cost_of_Sales2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Cost_of_Sales3 |floatformat:"2" }}
+                </td>
+              </tr>
+    
+              <tr>
+                <td style="padding: 10px 0"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Selling & Operating Expenses
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Selling_Operating_Expenses |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Selling_Operating_Expenses2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Selling_Operating_Expenses3 |floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Total Operating Expenses
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Total_Operating_Expenses |floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Total_Operating_Expenses2 |floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="2"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Total_Operating_Expenses3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  General & Administration Expenses
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.General_Administration_Expenses |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.General_Administration_Expenses2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.General_Administration_Expenses3 |floatformat:"2" }}
+                </td>
+              </tr>
+    
+              <tr>
+                <td style="padding: 10px 0"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Operating Income
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Operating Income
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Operating_Incomes |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Operating_Incomes2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Operating_Incomes3 |floatformat:"2" }}
+                </td>
+              </tr>
+    
+              <tr>
+                <td style="padding: 20px 0"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Other Income
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  rowspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Income Before Taxes
+                </td>
+                <td
+                  rowspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Income_Before_Taxes |floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Income_Before_Taxes2 |floatformat:"2" }}
+                </td>
+                <td
+                  rowspan="4"
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Income_Before_Taxes3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Gain (Loss) on Financial Instruments
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Gain_Loss_on_Financial_Instruments |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Gain_Loss_on_Financial_Instruments2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Gain_Loss_on_Financial_Instruments3 |floatformat:"2" }}
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Loss (Gain) on Foreign Currency
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Interest Expenses
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+              </tr>
+    
+              <tr>
+                <td style="padding: 10px 0"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Income Tax Expenses
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Income Tax Expenses
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  0.00
+                </td>
+              </tr>
+    
+              <tr>
+                <td style="padding: 10px 0"></td>
+              </tr>
+    
+              <tr>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Net Income
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 500;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                ></td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  Net Income
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                  {{ calculate_financials.Net_Incomes |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Net_Incomes2 |floatformat:"2" }}
+                </td>
+                <td
+                  style="
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: 600;
+                    border: 2px solid #000;
+                    height: 30px;
+                  "
+                >
+                {{ calculate_financials.Net_Incomes3 |floatformat:"2" }}
+                </td>
+              </tr>
+    
+              <tr>
+                <td></td>
+              </tr>
+    
+              <tr>
+                <td style="height: 30px"></td>
+              </tr>
+    
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </body>
+</html>

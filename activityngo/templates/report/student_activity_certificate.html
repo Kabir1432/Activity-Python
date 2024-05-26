@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        @page: first {
+            border: 2px solid black;
+        }
+
+        * {
+			box-sizing: border-box;
+			font-family: 'Times New Roman', Times, serif;
+			font-style: normal;
+		}
+
+        * {
+            box-sizing: border-box;
+        }
+
+        table {
+            border-collapse: collapse;
+			height:auto;
+			width:100%
+        }
+
+     
+
+        {% comment %} td {
+            padding: 5px 15px;
+        } {% endcomment %}
+
+        .student_name td {
+            border: 1px solid #000;
+        }
+
+        h1 {
+            margin-top: 5px;
+            font-size: 46px;
+            {% comment %} line-height: 65px; {% endcomment %}
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .main {
+            padding: 1.8rem 3rem;
+        }
+
+        h3 {
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+
+        span {
+            font-size: 22px !important;
+            line-height: 30px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 18px !important;
+            font-weight: 500;
+            line-height: 30px;
+        }
+
+        h4 {
+            font-size: 22px !important;
+            line-height: 32px;
+            margin-bottom: 0;
+            font-weight: 700;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" style="width:100%;height:950px;border:7px solid #16af57;">
+        <div class="" style="width: 100%;">
+            <table style="width: 100%;border-collapse: collapse;">
+                <tr>
+                    <td style="text-align: left;vertical-align: top;">
+                        <h1 style="font-size: 50px;margin: 32px 0 0 0;">CERTIFICATE</h1>
+
+                        <h1
+                            style="font-weight: bold;margin-bottom: 0;font-size: 26px; serif;margin:0;margin-top: 80px;">
+                            This is to certify that</h1>
+
+                            <h3
+                            style="font-weight: bold;margin-bottom: 90px;margin-top: 15px;font-size: 30px;serif;color: #6f359d;text-decoration: underline;">
+                            {{ user.fullname }}</h3>
+
+
+                    </td>
+                    <td style="text-align: center;width: 25%;">
+                        <div
+                        style="font-weight: bold;margin-bottom: 0;margin-top: 5px;">
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <div>
+                                <h2 style="font-size:24px;margin:0 0 25px;">
+                                    LGS Research Foundation
+                                </h2>
+                            </div>
+                            <div>
+                                <img src="https://api.activitypointsengg.com/static/images/left-logo.png" width="150px;height:auto;">
+                            </div>
+                        </div>
+                        </h1>
+                        <h4
+                            style="font-weight: bold;margin-bottom: 0;margin-top: 5px;font-size: 15px; serif;color: #bf8e22;">
+                            GSTIN: 29AAFCL6730Q1ZS</h4>
+                        <h4
+                            style="font-weight: bold;margin-bottom: 0;margin-top: 5px;font-size: 15px; serif;color: #bf8e22;">
+                            SECTION 8 Organization: U72100KA2024NPL183109</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left;">
+                        
+                    </td>
+                  
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: left;">
+                        
+                    </td>
+                </tr>
+                {% comment %} <tr>
+                    <td colspan="2" style="height:30px">
+                    </td>
+                </tr> {% endcomment %}
+                <tr>
+                    <td style="text-align: left;vertical-align: top;">
+                        <h3
+                            style="margin-bottom: 0;font-size: 24px;">
+                            has satisfactorily completed the AICTE Activity Points Activity <b
+                                style="color: #6f359d;text-decoration: underline;font-size: 24px;">{{ project.title}}</b> designed to award {{ number_of_points }} AICTE Activity Points
+                            involving implementation for {{ number_of_activity_hours }} Hours (Theory and Practical). 
+                            {% if order_detail.number_of_points == "points_20" %}
+                                The activities involved Theory Classes, Case Study, Public Survey, Field Visit, Solution as Beneficiary – Law Maker – Engineer, Startup Solution aided with Financial Reports.
+                            {% elif order_detail.number_of_points == "points_10" %}
+                                The activities involved Theory Classes, Case Study, Public Survey, Field Visit, and Solution as Engineer.
+                            {% else %}
+                                The activities involved Theory Classes, Case Study and Public Survey.
+                            {% endif %}
+                        </h3>
+
+                    </td>
+                    <td style="text-align: right;">
+                        <span style=", serif;color: #000000;font-size: 22px;">Scan here to
+                            Verify</span>
+                        <br>
+                        <img src="{{ order_detail.qr_code_verification.url }}" style="height:200px;width:200px;">
+                    </td>
+                </tr>
+                {% comment %} <tr>
+                    <td colspan="2" style="height:30px">
+
+
+                    </td>
+                </tr> {% endcomment %}
+                <tr>
+                    <td style="text-align: center;">
+                        <h3
+                            style="font-weight: bold;margin-top: -18px;margin-bottom: 0;font-size: 22px;, serif;color: #bf8e22;">
+                            Student ID : <b style="color: #000000;">{{ user.student_details.id_number }}</b>
+                        </h3>
+                        <h3
+                            style="font-weight: bold;margin-bottom: 77px;margin-top: 10px;font-size: 22px;, serif;color: #bf8e22;">
+                            Duration : <b style="color: #000000;">{{ order_detail.activity_subscribed_date|date:'d-m-Y' }} to {{ order_detail.activity_completed_date|date:'d-m-Y' }}</b>
+                        </h3>
+                    </td>
+                </tr>
+
+                {% comment %} <tr>
+                    <td colspan="2" style="height:50px">
+
+
+                    </td>
+                </tr> {% endcomment %}
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <table style="width: 100%">
+                            <tr>
+                                <td>
+                                    <img src="https://api.activitypointsengg.com/static/images/president_sign.png"
+                                        width="50%">
+                                    <h4
+                                        style="font-weight: bold;margin-top: 5px;margin-bottom: 0;font-size: 20px;serif;color: #16af57;">
+                                        Mr. B. G. Shivanna</h4>
+                                </td>
+                                <td>
+                                    <img src="https://api.activitypointsengg.com/static/images/secretry_sign.png"
+                                        width="50%">
+                                    <h4
+                                        style="font-weight: bold;margin-bottom: 0;margin-top: 5px;font-size: 20px;serif;color: #16af57;">
+                                        Mr. Harsha. S</h4>
+                                </td>
+                                <td>
+                                    <img src="https://api.activitypointsengg.com/static/images/tresure_sign.png"
+                                        width="50%">
+                                    <h4
+                                        style="font-weight: bold;margin-bottom: 0;margin-top: 5px;font-size: 20px;serif;color: #16af57;">
+                                        Mrs. B. Kowsalya
+                                    </h4>
+                                </td>
+
+                                <td style="text-align: center;">
+
+                                    <h4
+                                        style="font-weight: bold;margin-bottom: 0;margin-top: 5px;font-size: 20px;, serif;color: #000000;">
+                                        Registered with</h4>
+                                    <img src="https://api.activitypointsengg.com/static/images/bottom_logo.png"
+                                        width="50%" >
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
